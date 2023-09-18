@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert Record Into PostgreSQL</title>
+</head>
+<body>
+    <center>
+        <h1>How to create CRUD Operation wth PostgreSQL</h1>
+    </center>
+    <hr/>
+    <table border = '1'>
+        <tr>
+            <td>Employee Name</td>
+            <td><input type="text" placeholder="Enter Employee name..." name="empname"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" placeholder="Enter Employee email..." name="email"></td>
+        </tr>
+        <tr>
+            <td>Occupation</td>
+            <td><input type="text" placeholder="Enter Employee occupation..." name="occupation"></td>
+        </tr>
+        <tr>
+            <td>Mobile Number</td>
+            <td><input type="text" placeholder="Enter Employee Mobile Number..." name="mobile_no"></td>
+        </tr>
+        <tr>
+            <td>Current Salary</td>
+            <td><input type="text" placeholder="Enter Employee Current Salary..." name="salary"></td>
+        </tr>
+            <td>{{result.salary}}</td>
+            <td>{{result.gender}}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
