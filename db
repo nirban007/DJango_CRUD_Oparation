@@ -1,0 +1,12 @@
+create table employee
+(
+	id serial primary key,
+	empname varchar(150),
+	email varchar (150),
+	occupation varchar(150),
+	mobile_no varchar(150),
+	salary int,
+	gender char
+
+);
+select * from employee
