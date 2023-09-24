@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Operation PostgreSQL</title>
+</head>
+<body>
+    <center>
+        <h1>How to create CRUD Operation wth PostgreSQL</h1>
+    
+    <hr/>
+    <a href="{% url 'Insertemp' %}">Create New Employee</a>
+    <table border = '1'>
+        <tr>
+            <td>Employee ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Occupation</td>
+            <td>Mobile</td>
+            <td>Salary</td>
+            <td>Gender</td>
+        </tr>
+        {%for result in data%}
+        <tr>
+            <td>{{result.id}}</td>
+            <td>{{result.empname}}</td>
+            <td>{{result.email}}</td>
+            <td>{{result.occupation}}</td>
+            <td>{{result.mobile_no}}</td>
+            <td>{{result.salary}}</td>
+            <td>{{result.gender}}</td>
+            <td><a href="Edit/{{result.id}}">Edit</td>
+            <td><a href="Delete/{{result.id}}" onclick = "return confirmation('Are you sure want to delete the record?')">Delete</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+</body>
+</html>
+
