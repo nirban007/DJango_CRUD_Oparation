@@ -6,8 +6,9 @@
 <body>
     <center>
         <h1>How to create CRUD Operation wth PostgreSQL</h1>
-    </center>
+    
     <hr/>
+    <a href="{% url 'Insertemp' %}">Create New Employee</a>
     <table border = '1'>
         <tr>
             <td>Employee ID</td>
@@ -27,10 +28,13 @@
             <td>{{result.mobile_no}}</td>
             <td>{{result.salary}}</td>
             <td>{{result.gender}}</td>
+            <td><a href="Edit/{{result.id}}">Edit</td>
+            <td><a href="Delete/{{result.id}}" onclick = "return confirmation('Are you sure want to delete the record?')">Delete</td>
             
         </tr>
         {% endfor %}
     </table>
+</center>
 </body>
 </html>
 
